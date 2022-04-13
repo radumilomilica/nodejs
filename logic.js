@@ -35,3 +35,5 @@ console.log("!true", !true);
 console.log("!false", !false);
 
 console.log("Logical operator precedence: NOT (!), AND (&&), OR (||)");
+
+console.log("Negovan")

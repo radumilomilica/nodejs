@@ -6,8 +6,8 @@ console.log("true || false:", true || false);
 console.log("false || true:", false || true);
 console.log("false || false:", false || false);
 
-let hour = 57;
-if (hour < 0 || hour > 23) {
+let hour = 17;
+if(hour < 0 || hour > 23){
     console.log("Vreme nije validno!");
     process.exit(0);
 }
@@ -22,11 +22,11 @@ console.log("true && false:", true && false);
 console.log("false && true:", false && true);
 console.log("false && false:", false && false);
 
-if (!(hour >= 8 && hour <= 16)) {
+if(!(hour >= 8 && hour <= 16)){
     console.log("Kancelarija je otvorena!");
 }
 
-if ((hour >= 16 && hour <= 23) || (hour >= 0 && hour <= 8)) {
+if((hour >= 16 && hour <= 23) || ( hour >= 0 && hour <= 8)) {
     console.log("Kancelarija je otvorena u 3. smeni!");
 }
 
@@ -34,6 +34,4 @@ console.log("Logical operator: NOT !");
 console.log("!true", !true);
 console.log("!false", !false);
 
-console.log("Logical operator precedence: NOT (!), AND (&&), OR (||)");
-
-console.log("Negovan")
+console.log("Logical operator precedence: NOT(!), AND (&&), OR (||)");

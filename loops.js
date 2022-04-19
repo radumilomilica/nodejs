@@ -1,7 +1,7 @@
 "use strict";
 
 console.log("Loops: while"); // prvo proverava uslov pa izvrsava petlju
-let c = 5;
+let c = 0;
 while(c < 5) {
     console.log(c);
     c++;

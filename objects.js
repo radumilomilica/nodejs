@@ -105,3 +105,81 @@ let clone2 = Object.assign({}, pozivniBrojevi);
 for(let key in clone2) {
     console.log("Key=", key, "pozivniBrojevi =", pozivniBrojevi[key],"<->", clone2[key], "= clone2");
 }
+
+function isEqual(obj1, obj2) {
+    let returnValue = true;
+
+    if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+        return false;
+    }
+
+    for (let key in obj1) {
+        if (obj2[key] === undefined) {
+            return false;
+        }
+
+        if(obj1[key] !== obj2[key]) {
+            return false;
+        }   
+        
+    }
+    return returnValue;
+}
+
+let objekat1 = {
+    id: 1,
+    ime: "Petar",
+    prop: "xyz"
+   
+};
+
+let objekat2 = {
+    id: 1,
+    ime: "Petar",
+    broj: 3
+}
+
+console.log("== :", objekat1 == objekat2);
+console.log("=== :", objekat1 === objekat2);
+console.log("isEqual", isEqual(objekat1, objekat2));
+console.log("Object.keys() :", Object.keys(objekat2).length);
+
+let sayYourName = function() {
+    console.log("Moje ime je", this.name.fullName);
+};
+
+user.sayHi = sayYourName;
+
+let user3 = {
+    name: {
+        fullName: "User 3"
+    },
+    sayHi: sayYourName  // isto sto i user3.sayHi = sayYourName;
+};
+
+user.sayHi();
+user3.sayHi();
+let user4 = Object.assign({}, user);
+user4.name.fullName = "Novi User 4";
+user4.sayHi();
+
+let notUser = {
+    name: {
+        fullName: "Not a user"
+    },
+    sayHello: sayYourName
+};
+
+notUser.sayHello();
+
+let nekaFunkcija = function() {
+    return 10;
+}
+
+let objekatA = {
+    id: 1,
+    callFunc: nekaFunkcija, //dodeljivanje funkcije
+    callFunc2: nekaFunkcija() //dodeljivanje povratne vrednosti iz funkcije
+}
+
+console.log("objekatA.callFunc()", objekatA.callFunc());

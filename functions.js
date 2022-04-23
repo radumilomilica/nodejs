@@ -31,7 +31,7 @@ function addNumber(number1, number2) {
     return result;
 }
 
-function factorial(x) {
+let factorial = function(x) {
     if (x == 0) {
         return 1;
     }

@@ -40,3 +40,19 @@ let factorial = function(x) {
 }
 
 console.log("2! =", factorial(2));
+
+function myCalc(number1, number2, myCallback) {
+    let result = number1 + number2;
+    myCallback(result);
+}
+
+function prikaziRezultat(rezultat) {
+    console.log(`Rezultat je ${rezultat}`);
+}
+
+function prikaziRezultat2(rezultat) {
+    console.log(`Rezultat sabiranja je ${rezultat}`);
+}
+
+myCalc(3, 3, prikaziRezultat);
+myCalc(3, 3, prikaziRezultat2);
